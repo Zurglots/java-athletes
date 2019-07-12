@@ -1,4 +1,4 @@
-package com.lambdaschool.initial;
+package com.lambdaschool.solution;
 
 public class Shoes
 {
