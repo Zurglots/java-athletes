@@ -10,7 +10,12 @@ public class Main
         // Create a Track Athlete
         injector = new TrackAthleteCreationInjector();
         app = injector.getProcess();
+        // Lines 11 and 12 seem to be a way to 'double' implement multiple interfaces to
+        // ensure we're receiving both the injector and implementor.
         app.displayAthlete();
+        // app is declared as an injector created from the athlete specific injector and
+        // displayAthlete is invoked from the TrackAthleteCreationInjector which
+        // created an obj from the TrackAthleteCreationImpl inheriting the correct override to print the correct string.
 
         // Create a Hockey Athlete
         injector = new HockeyAthleteCreationInjector();
